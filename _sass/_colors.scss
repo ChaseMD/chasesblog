@@ -1,0 +1,17 @@
+$colors: (
+  white-bg: #fff,
+  dark-txt: #2c2e33,
+  dark-txt-light: lighten(#2c2e33, 40%),
+  link-txt: #0a58ff,
+  link-txt-light: #adc7ff,
+  social-fb: #3b5998,
+  social-tw: #1da1f2,
+  social-in: #0077b5,
+  social-ig: #e1306c,
+  social-md: #00ab6c,
+  social-rt: #ff4500
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

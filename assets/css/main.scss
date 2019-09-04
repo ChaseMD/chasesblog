@@ -1,0 +1,52 @@
+---
+---
+
+@import "colors";
+@import "typography";
+@import "navigation";
+@import "components";
+@import "posts";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: color(white-bg);
+  color: color(dark-txt);
+  font-family: $serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 10px solid color(link-txt);
+
+  @media (min-width: 650px) {
+    font-size: 1.125rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @media (max-width: 650px) {
+    padding: 0 10px;
+  }
+}
+
+main.container {
+  margin-top: 3rem;
+}
+
+.head {
+  color: color("dark-txt");
+  border-bottom: 0;
+  font-family: $headings;
+  font-size: 130%;
+  transition: color 0.3s;
+}
+
+.head:hover {
+  color: color("dark-txt-light");
+}

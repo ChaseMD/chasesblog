@@ -1,0 +1,164 @@
+// Buttons
+.button,
+button,
+input[type="submit"] {
+  font-family: $headings;
+  font-size: 1.125rem;
+  padding: 0.25rem 1rem;
+  color: color(dark-txt);
+  border: 2px solid color(dark-txt-light);
+  background: transparent;
+  border-radius: 3px;
+  transition: border 0.3s, color 0.3s;
+  margin: 0.5rem auto 0 auto;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  border-color: color(link-txt);
+  color: color(link-txt);
+}
+
+.full-btn {
+}
+
+// Forms
+label {
+  color: color(dark-txt);
+  font-family: $headings;
+  font-size: 1.625rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid color(dark-txt-light);
+  border-radius: 3px;
+  font-size: 1rem;
+  font-family: $serif;
+}
+
+input[type="text"]:focus {
+  border: 2px solid color(link-txt);
+}
+
+// Social Links Section
+.social-link {
+  border-bottom: 0;
+  color: color(dark-txt);
+  padding: 6px;
+  transition: color 0.2s;
+}
+
+.social-box {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 500px) {
+    display: block;
+  }
+}
+
+.social-box .social-link {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+.fb:hover {
+  color: color(social-fb);
+}
+.tw:hover {
+  color: color(social-tw);
+}
+.in:hover {
+  color: color(social-in);
+}
+.md:hover {
+  color: color(social-md);
+}
+.ig:hover {
+  color: color(social-ig);
+}
+.em:hover {
+  color: color(dark-txt-light);
+}
+.rt:hover {
+  color: color(social-rt);
+}
+
+// Shares Section
+#shares {
+  display: inline-block;
+}
+
+.share-link {
+  color: inherit;
+  border-bottom: 0;
+  padding: 5px;
+}
+
+.fa-link {
+  padding-right: 3px;
+}
+
+// Figures
+figure {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+figure .full-bleed {
+  width: 700px;
+
+  @media (max-width: 930px) {
+    width: 100%;
+  }
+}
+
+figcaption {
+  font-size: 83.33%;
+  font-style: italic;
+}
+
+// Content Lists
+.content-list {
+  list-style: none;
+  padding: 0;
+}
+
+.content-list-item {
+  margin-bottom: 0.5rem;
+  background-color: color(white-bg);
+}
+
+// Newsletter
+.newsletter {
+  background-color: #eee;
+  color: color(dark-txt);
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.newsletter a {
+  margin: 1rem 2rem 0 2rem;
+  display: block;
+  text-align: center;
+}
+
+// Buttons
+#buttons {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.no-results {
+  z-index: -1;
+  position: absolute;
+}

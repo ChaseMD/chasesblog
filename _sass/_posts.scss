@@ -1,0 +1,12 @@
+.post-title {
+  color: color(dark-txt);
+  border-bottom: 0;
+}
+
+.post-title:hover {
+  border-bottom: 2px solid color(dark-txt);
+}
+
+.post {
+  margin-bottom: 5rem;
+}

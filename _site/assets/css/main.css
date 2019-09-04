@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:700&display=swap");
+h1, h2, h3, h4, h5, h6 { font-family: "Roboto", Arial; margin: 2rem 0 0 0; }
+
+h1 { font-size: 1.675rem; line-height: 1.2; margin: 1.25rem 0; }
+
+h2 { font-size: 1.375rem; }
+
+h3 { font-size: 1.25rem; }
+
+h4 { font-size: 1rem; }
+
+h5 { font-size: 1rem; }
+
+h6 { font-size: 1rem; font-style: italic; }
+
+@media (min-width: 768px) { h1 { font-size: 2rem; line-height: 1.2; }
+  h2 { font-size: 1.375rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.125rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1.125rem; font-style: italic; } }
+
+a { color: #0a58ff; text-decoration: none; border-bottom: 2px solid #adc7ff; }
+
+a:hover { border-bottom-color: #0a58ff; }
+
+ul, ol, p { margin-top: 0; margin-bottom: 2rem; }
+
+ul { list-style: disc; }
+
+li { margin-bottom: 0.5rem; }
+
+blockquote { border-left: 4px solid #8e929d; font-size: 90%; width: 90%; padding: 0.5rem 0 0.5rem 1rem; margin: 0 auto 2rem auto; }
+
+cite { display: block; }
+
+time { font-size: 83.333%; }
+
+.post-title { color: #2c2e33; border-bottom: 0; }
+
+.post-title:hover { border-bottom: 2px solid #2c2e33; }
+
+header { border-top: 10px solid #adc7ff; }
+
+nav { text-align: center; margin-top: 0.5rem; }
+
+.nav-link { font-family: "Roboto", Arial; font-size: 1.375rem; color: #8e929d; border-bottom: 0; transition: color 0.3s; height: 40px; margin-bottom: 1rem; padding-right: 10px; cursor: pointer; }
+
+.nav-link:hover { color: #0a58ff; }
+
+.active { color: #0a58ff; cursor: default; }
+
+.is-hidden { display: none; }
+
+.no-style { list-style: none; padding: 0; }
+
+footer { margin: 5rem 0 2rem 0; text-align: center; }
+
+.small { font-size: 1rem; }
+
+#toTopLink { position: fixed; bottom: 10%; right: 1%; }
+
+.button, button, input[type="submit"] { font-family: "Roboto", Arial; font-size: 1.125rem; padding: 0.25rem 1rem; color: #2c2e33; border: 2px solid #8e929d; background: transparent; border-radius: 3px; transition: border 0.3s, color 0.3s; margin: 0.5rem auto 0 auto; cursor: pointer; }
+
+.button:hover, button:hover, input[type="submit"]:hover { border-color: #0a58ff; color: #0a58ff; }
+
+label { color: #2c2e33; font-family: "Roboto", Arial; font-size: 1.625rem; margin-top: 0; margin-bottom: 1rem; }
+
+input[type="text"] { width: 100%; padding: 8px; border: 2px solid #8e929d; border-radius: 3px; font-size: 1rem; font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
+
+input[type="text"]:focus { border: 2px solid #0a58ff; }
+
+.social-link { border-bottom: 0; color: #2c2e33; padding: 6px; transition: color 0.2s; }
+
+.social-box { display: flex; flex-direction: row; }
+
+@media (max-width: 500px) { .social-box { display: block; } }
+
+.social-box .social-link { width: 200px; height: 50px; margin: auto; text-align: center; display: block; }
+
+.fb:hover { color: #3b5998; }
+
+.tw:hover { color: #1da1f2; }
+
+.in:hover { color: #0077b5; }
+
+.md:hover { color: #00ab6c; }
+
+.ig:hover { color: #e1306c; }
+
+.em:hover { color: #8e929d; }
+
+.rt:hover { color: #ff4500; }
+
+#shares { display: inline-block; }
+
+.share-link { color: inherit; border-bottom: 0; padding: 5px; }
+
+.fa-link { padding-right: 3px; }
+
+figure { padding: 0; margin: 0; margin-bottom: 2rem; }
+
+figure .full-bleed { width: 700px; }
+
+@media (max-width: 930px) { figure .full-bleed { width: 100%; } }
+
+figcaption { font-size: 83.33%; font-style: italic; }
+
+.content-list { list-style: none; padding: 0; }
+
+.content-list-item { margin-bottom: 0.5rem; background-color: #fff; }
+
+.newsletter { background-color: #eee; color: #2c2e33; padding: 5px 20px; border-radius: 5px; }
+
+.newsletter a { margin: 1rem 2rem 0 2rem; display: block; text-align: center; }
+
+#buttons { margin-top: 2rem; text-align: center; }
+
+.no-results { z-index: -1; position: absolute; }
+
+.post-title { color: #2c2e33; border-bottom: 0; }
+
+.post-title:hover { border-bottom: 2px solid #2c2e33; }
+
+.post { margin-bottom: 5rem; }
+
+html { font-size: 100%; }
+
+body { margin: 0; background-color: #fff; color: #2c2e33; font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif; font-size: 1rem; line-height: 1.6; border-top: 10px solid #0a58ff; }
+
+@media (min-width: 650px) { body { font-size: 1.125rem; } }
+
+.container { width: 100%; max-width: 680px; box-sizing: border-box; margin: 0 auto; }
+
+@media (max-width: 650px) { .container { padding: 0 10px; } }
+
+main.container { margin-top: 3rem; }
+
+.head { color: #2c2e33; border-bottom: 0; font-family: "Roboto", Arial; font-size: 130%; transition: color 0.3s; }
+
+.head:hover { color: #8e929d; }
+
+/*# sourceMappingURL=main.css.map */

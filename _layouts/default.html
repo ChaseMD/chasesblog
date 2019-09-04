@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ page.number }} / {{ page.title }} | Chase's Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href={{
+      "assets/css/main.css" | relative_url
+    }}>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="head">
+          Chase's Blog
+        </a>
+        <br />
+        <a class="nav-link" href="/s">Search</a>
+        <a
+          class="nav-link"
+          target="_blank"
+          href="https://chasedooley.substack.com"
+        >
+          Subscribe
+        </a>
+        <a class="nav-link" target="_blank" href="https://chasedooley.com"
+          >About</a
+        >
+        <a
+          class="nav-link"
+          target="_blank"
+          href="https://medium.com/@chasedooley"
+          >Articles</a
+        >
+        <a class="nav-link" href="/connect">Connect</a>
+      </nav>
+    </header>
+    <main class="container">
+      <article>
+        <h1>
+          <a href="{{ page.url }}" class="post-title">
+            #{{ page.number }} / {{ page.title }}
+          </a>
+        </h1>
+        {{ content }}
+        <hr />
+        <time>{{ page.date | date: "%B %d, %Y" }} / </time>
+        {% include page-shares.html %}
+        <section id="buttons">
+          <a href="{{ page.previous.url }}" class="button">Previous</a>
+          <a onclick="randomPage()" class="button">Random Page</a>
+          <a href="{{ page.next.url }}" class="button">Next</a>
+        </section>
+      </article>
+    </main>
+
+    <script>
+      // Random page feature
+      var postCount = 2;
+
+      function randomPage() {
+        let randomPageNumber = Math.floor(Math.random() * postCount) + 1;
+        window.location = `http://127.0.0.1:4000/${randomPageNumber}`;
+      }
+    </script>
+  </body>
+</html>

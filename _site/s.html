@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search | Chase's Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href=/assets/css/main.css>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="head">
+          Chase's Blog
+        </a>
+        <br />
+        <a class="nav-link" href="/s">Search</a>
+        <a
+          class="nav-link"
+          target="_blank"
+          href="https://chasedooley.substack.com"
+        >
+          Subscribe
+        </a>
+        <a class="nav-link" target="_blank" href="https://chasedooley.com"
+          >About</a
+        >
+        <a
+          class="nav-link"
+          target="_blank"
+          href="https://medium.com/@chasedooley"
+          >Articles</a
+        >
+        <a class="nav-link" href="/connect">Connect</a>
+      </nav>
+    </header>
+    <main class="container">
+      <article>
+        <h1>Search</h1>
+        <input id="q" type="text" placeholder="Search for a post..." />
+      </article>
+      <ul id="posts" class="content-list">
+        <h3 class="no-results">No results found</h3>
+        
+      </ul>
+    </main>
+    <footer>
+      <h4>
+        Need more?
+        <a
+          href="https://duckduckgo.com/?q=.&sites=chases.blog&ia=web&atb=v174-1"
+        >
+          Try your search with DuckDuckGo</a
+        >.
+      </h4>
+      <a class="nav-link" href="#">Back to Top</a>
+    </footer>
+
+    <script>
+      // Search feature
+      // Check if url has a query
+      let params;
+      let urlQuery;
+      document.addEventListener("DOMContentLoaded", () => {
+        let params = new URLSearchParams(location.search);
+        let urlQuery = params.get("q");
+        console.log(urlQuery);
+        searchPosts();
+
+        // Get input element
+        let searchQuery = document.getElementById("q");
+        // Event Listener
+        searchQuery.addEventListener("keyup", searchPosts);
+
+        function searchPosts() {
+          // Get value of input
+          let query;
+          if (urlQuery) {
+            query = urlQuery.toUpperCase();
+          } else {
+            query = document.getElementById("q").value.toUpperCase();
+          }
+
+          // Get names ul
+          let ul = document.getElementById("posts");
+          // Get li's from ul
+          let li = ul.querySelectorAll("li.content-list-item");
+
+          // Loop through collection-item li's
+          for (let i = 0; i < li.length; i++) {
+            let a = li[i].getElementsByTagName("a")[0];
+
+            // If matched
+            if (a.innerHTML.toUpperCase().indexOf(query) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+
+          urlQuery = false;
+        }
+      });
+    </script>
+  </body>
+</html>

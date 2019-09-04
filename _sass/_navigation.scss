@@ -1,0 +1,54 @@
+header {
+  border-top: 10px solid color(link-txt-light);
+}
+
+nav {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+// Nav Links
+.nav-link {
+  font-family: $headings;
+  font-size: 1.375rem;
+  color: color(dark-txt-light);
+  border-bottom: 0;
+  transition: color 0.3s;
+  height: 40px;
+  margin-bottom: 1rem;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: color(link-txt);
+}
+
+.active {
+  color: color(link-txt);
+  cursor: default;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.no-style {
+  list-style: none;
+  padding: 0;
+}
+
+// Footer
+footer {
+  margin: 5rem 0 2rem 0;
+  text-align: center;
+}
+
+.small {
+  font-size: 1rem;
+}
+
+#toTopLink {
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+}
